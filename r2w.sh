@@ -1,5 +1,5 @@
-sudo grub-mkconfig > /tmp/grub_config.tmp
-
+echo "Scanning GRUB ..."
+sudo grub-mkconfig > /tmp/grub_config.tmp 2>&1
 menu=$(grep -E '^(menuentry|submenu)' /tmp/grub_config.tmp)
 echo "\n### GRUB boot menu ###"
 #echo "$menu"
