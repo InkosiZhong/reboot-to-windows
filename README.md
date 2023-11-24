@@ -23,5 +23,13 @@ It makes it possible for unattended devices to switch between multiple systems u
 Select the index of the target system:
 > 3
 Selected system: Windows Boot Manager (on /dev/nvme0n1p1)
+
+> r2w 3
+### GRUB boot menu ###
+1: Ubuntu
+2: Advanced options for Ubuntu
+3: Windows Boot Manager (on /dev/nvme0n1p1)
+4: UEFI Firmware Settings
+Selected system: Windows Boot Manager (on /dev/nvme0n1p1)
 ```
 
