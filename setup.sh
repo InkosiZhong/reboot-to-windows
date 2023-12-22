@@ -1,7 +1,10 @@
 echo "Install r2w (Reboot to Windows)"
-sudo cp r2w.sh /usr/local/bin/
-sudo rm /usr/local/bin/r2w
-sudo ln -s /usr/local/bin/r2w.sh /usr/local/bin/r2w
-sudo chmod +x /usr/local/bin/r2w.sh
-sudo chmod +x /usr/local/bin/r2w
-echo usage: r2w
+install_path=/usr/local/bin
+sudo cp r2w.sh $install_path
+if [ -f $install_path/r2w ]; then
+    sudo rm $install_path/r2w
+fi
+sudo ln -s $install_path/r2w.sh $install_path/r2w
+sudo chmod +x $install_path/r2w.sh
+sudo chmod +x $install_path/r2w
+echo usage: r2w [n] # n (alter): system index
